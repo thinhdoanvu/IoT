@@ -1,0 +1,3 @@
+"Lamp ON"
+"Humidity ON"
+"Pump ON"
