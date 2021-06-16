@@ -99,6 +99,6 @@ Với 1 tài khoản free, tối đa được 3 domain
 	Thay vì nhập: localhost/NTUSmartAgri
 	Có thể: 192.168.1.3/NTUSmartAgri tử smart phone
 ## Bước 6. Test thử từ INTERNET
-	http://ntusmartagri/NTUSmartAgri
-	http://ntusmartagri/GeneticsConservation
+	http://ntusmartagri.ddns.net/NTUSmartAgri
+	http://ntusmartagri.ddns.net/GeneticsConservation
 	
