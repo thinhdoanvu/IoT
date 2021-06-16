@@ -65,3 +65,40 @@ http://www.google.com/settings/security/lesssecureapps
 		gargle_oauth_email = "itspider2022@gmail.com"
 		)
 	gm_auth(email = "itspider2022@gmail.com")
+
+# DDNS của No-ip
+## Bước 1. Đăng ký tên miền (free) từ No-ip
+	login: no-ip.com
+	tạo mới ddns: ntusmartagri.ddns.net
+	xác thực bằng email đã đăng ký
+Muốn đăng ký tên miền của cái nào thì tùy thuộc vào router hỗ trợ, như của mình thì hỗ trợ của No-ip, dyndns, DtDNS, VDDNS, dipic
+Với 1 tài khoản free, tối đa được 3 domain
+## Bước 2. Cấu hình modem để bên ngoài có thể truy cập
+	Truy cập đến mục: DDNS
+	Enable: DDNS
+	Nhập tên server: https://my.noip.com
+	username: itspider2022@gmail.com
+	pasword:************************
+	WAN Connection: ocmi_ip4_ppoe_1 (kiểu kết nối của cổng WAN, do mình cấu hình: ISP -> cắm vào cổng WAN thiết bị)
+	Hostname: ntusmartagri.ddns.net
+## Bước 3. Cấu hình chức năng Port Forwarding
+	Enable chức năng
+	Name: NTUSmartAgri (tên của trang web hay tên gì cũng được, vid dụ: port80_website1)
+	WAN Host Start IP và End IP Address: Bỏ trống (vì mình không biết IP nào sẽ kết nối đến)
+	WAN Connection: ocmi_ipv4_pppoe_1
+	WAN Start Port: 80 (cổng cho phép từ Internet đi vào)
+	WAN End Port: 80 (cổng cho phép từ Internet đi vào)
+	*** 2 cái này có thể sửa là: 22- 3389 (ssh đến remote desktop)
+	LAN Host IP Address: 192.168.1.3 (PC dùng làm web server)
+	LAN Start Port: 80 (cổng cho phép từ mạng LAN kết nối vào webserver)
+	LAN End Port: 80 (cổng cho phép từ mạng LAN kết nối vào webserver)
+	*** 2 cái này có thể sửa là: 22- 3389 (ssh đến remote desktop)
+## Bước 4. Kiểm tra cổng đã mở hay còn đóng
+	https://www.portcheckers.com/
+## Bước 5. Test thử mạng LAN
+	Thay vì nhập: localhost/NTUSmartAgri
+	Có thể: 192.168.1.3/NTUSmartAgri tử smart phone
+## Bước 6. Test thử từ INTERNET
+	http://ntusmartagri/NTUSmartAgri
+	http://ntusmartagri/GeneticsConservation
+	
